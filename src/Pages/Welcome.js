@@ -9,7 +9,7 @@ const Welcome = () => {
   const navigate = useNavigate();
   return (
     <div className=" relative flex flex-col align-middle items-center justify-evenly h-screen ">
-      <div className=" carousel carousel-center  p-4 space-x-4 bg-neutral rounded-box">
+      <div className=" shadow-xl shadow-gray-400 carousel carousel-center  p-4 space-x-4 bg-neutral rounded-box">
         <div className="carousel-item">
           <img src={image1} className="rounded-box" />
         </div>
