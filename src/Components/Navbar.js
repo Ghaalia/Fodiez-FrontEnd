@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-300 border border-black flex ">
+    <div className="navbar bg-base-300 shadow-lg shadow-gray-500  flex ">
       <div className="flex-none gap-2">
         <div className="dropdown dropdown-start">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -35,7 +35,7 @@ const Navbar = () => {
       </div>
 
       <div className="flex-1 justify-end">
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <a className="btn btn-ghost normal-case text-xl">Foodiez</a>
       </div>
     </div>
   );
