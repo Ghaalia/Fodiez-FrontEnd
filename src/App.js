@@ -9,7 +9,7 @@ import Navbar from "./Components/Navbar";
 function App() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Routes>
         <Route path="/" Component={Welcome} />
