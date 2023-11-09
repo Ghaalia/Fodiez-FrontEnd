@@ -71,7 +71,7 @@ const Register = () => {
               onClick={() => navigate("/login")}
               className="text-black text-sm hover:underline"
             >
-              Already have an account?
+              Already have an Account? Login!
             </button>
           </div>
         </div>
