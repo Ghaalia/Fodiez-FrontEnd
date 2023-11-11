@@ -10,7 +10,7 @@ const Register = async (userInfo) => {
   for (let key in userInfo) {
     formData.append(key, userInfo[key]);
   }
-  const res = await instance.post("", formData);
+  const res = await instance.post("/", formData);
   return res.data;
 };
 
