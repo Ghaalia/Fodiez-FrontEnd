@@ -6,8 +6,16 @@ import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import Navbar from "./Components/Navbar";
 import Guest from "./Pages/Guest";
+import { useContext } from "react";
+import UserContext from "./context/UserContext";
 
 function App() {
+  // const { user, setUser } = useContext(UserContext);
+
+  // useEffect(() => {
+  //   setUser(checktoken());
+  // }, []);
+
   return (
     <div className=" bg-">
       {/* <Navbar /> */}
