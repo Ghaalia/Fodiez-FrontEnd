@@ -13,5 +13,16 @@ const Register = async (userInfo) => {
   const res = await instance.post("/", formData);
   return res.data;
 };
+const getAllCategory = async () => {
+  const res = await instance.get("/");
+  return res.data;
+};
+const addCategory = async (name, image) => {
+  const res = await instance.post("/", {
+    name,
+    image,
+  });
+  return res.data;
+};
 
-export { Login, Register };
+export { Login, Register, getAllCategory, addCategory };
