@@ -1,7 +1,7 @@
 import instance from ".";
 
 const Login = async (userInfo) => {
-  const res = await instance.post("/", userInfo);
+  const res = await instance.post(`/User/signin`, userInfo);
   return res.data;
 };
 
@@ -10,19 +10,22 @@ const Register = async (userInfo) => {
   for (let key in userInfo) {
     formData.append(key, userInfo[key]);
   }
-  const res = await instance.post("/", formData);
+  const res = await instance.post(`/User`, formData);
   return res.data;
 };
-const getAllCategory = async () => {
-  const res = await instance.get("/");
+
+const getAllUsers = async () => {
+  const res = await instance.get(`/User`);
   return res.data;
 };
-const addCategory = async (name, image) => {
-  const res = await instance.post("/", {
-    name,
-    image,
+
+const updateUser = async (userId, username, password, email) => {
+  const res = await instance.put(`/User/${userId}`, {
+    username,
+    password,
+    email,
   });
   return res.data;
 };
 
-export { Login, Register, getAllCategory, addCategory };
+export { Login, Register, getAllUsers, updateUser };
