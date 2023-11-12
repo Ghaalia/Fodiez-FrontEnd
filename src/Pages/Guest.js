@@ -9,7 +9,6 @@ import labanese from "../media/labanese.jpeg";
 import indian from "../media/Indian-food-specialties.jpg";
 import sushi from "../media/sushi.jpeg";
 const Guest = () => {
-  const navigate = useNavigate();
   return <></>;
 };
 
