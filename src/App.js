@@ -20,7 +20,7 @@ function App() {
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
-      <div className=" bg-">
+      <div className="App">
         {user && <Navbar />}
 
         <Routes>
@@ -28,8 +28,8 @@ function App() {
           <Route path="/Register" Component={Register} />
           <Route path="/Login" Component={Login} />
           <Route path="/HomePage" Component={HomePage} />
-          <Route path="/Guest" Component={Guest} />
-          <Route path="/category" Component={CategoryList} />
+          {/* <Route path="/Guest" Component={Guest} /> */}
+          <Route path="/Category" Component={CategoryList} />
         </Routes>
       </div>
     </UserContext.Provider>
