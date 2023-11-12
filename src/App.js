@@ -6,9 +6,15 @@ import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import Navbar from "./Components/Navbar";
 import Guest from "./Pages/Guest";
-import Category from "./Components/Category";
+import CategoryList from "./Components/CategoryList";
 
 function App() {
+  // const { user, setUser } = useContext(UserContext);
+
+  // useEffect(() => {
+  //   setUser(checktoken());
+  // }, []);
+
   return (
     <div className=" bg-">
       {/* <Navbar /> */}
@@ -19,7 +25,7 @@ function App() {
         <Route path="/Login" Component={Login} />
         <Route path="/HomePage" Component={HomePage} />
         <Route path="/Guest" Component={Guest} />
-        <Route path="/category" Component={Category} />
+        <Route path="/category" Component={CategoryList} />
       </Routes>
     </div>
   );

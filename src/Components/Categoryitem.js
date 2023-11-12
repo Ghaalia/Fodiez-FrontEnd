@@ -1,37 +1,28 @@
-import { useQuery } from "@tanstack/react-query";
 import React from "react";
-import { getAllCategory } from "../../api/auth";
+import { Link } from "react-router-dom";
 
-const Categoryitem = () => {
-  const { data: catdata } = useQuery({
-    queryKey: ["category"],
-    queryFn: () => getAllCategory(),
-  });
-
+const CategoryItem = (category) => {
   return (
-    <div className="bg-[#F9E3BE] w-screen h-[100vh] flex justify-center items-center">
-      <div className="border border-black rounded-md w-[70%] h-[70%] overflow-hidden flex flex-col md:flex-row p-5">
-        <div className="h-full w-full md:w-[35%]">
-          <img
-            src={category?.image}
-            alt={category?.name}
-            className="object-contain w-full h-full"
-          />
-        </div>
-        <div className="w-full md:w-[65%] h-full pt-[30px] flex flex-col p-3">
-          <h1>Name: {category?.name}</h1>
-
-          <button className="w-[70px] border border-black rounded-md  hover:bg-green-400 mb-5">
-            Create Category
-          </button>
-
-          <button className="w-[70px] border border-black rounded-md  hover:bg-red-400">
-            Delete Category
-          </button>
+    <div className="card card-compact w-40 h-70 bg-base-100 shadow-xl ">
+      <figure>
+        <img
+          className="h-50"
+          src={category.image}
+          alt={`${category.name}-image`}
+        />
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title">{category.name}</h2>
+        <div className="card-actions justify-center ">
+          <Link to={"/category"}>
+            <button className="btn flex justify-center w-[100px] text-xs btn-primary ">
+              View more
+            </button>
+          </Link>
         </div>
       </div>
     </div>
   );
 };
 
-export default Categoryitem;
+export default CategoryItem;
