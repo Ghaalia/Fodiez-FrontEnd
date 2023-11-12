@@ -17,7 +17,8 @@ const CategoryList = () => {
     )
     .map((category) => <CategoryItem category={category} key={category.id} />);
 
-  // return (
+  return;
+  // (
   //   <div className=" flex flex-col justify-center items-center ">
   //     <div className="w-[76vw] flex h-[30px] mb-[30px] mt-[30px]">
   //       <input

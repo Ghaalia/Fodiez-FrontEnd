@@ -1,9 +1,17 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import profilePic from "../media/ProfilePic.jpeg";
+import UserContext from "../context/UserContext";
+import { logout } from "../api/auth";
 
 const Navbar = () => {
+  const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
+
+  const handelLogout = () => {
+    logout(setUser);
+    navigate("/");
+  };
 
   return (
     <div className="navbar bg-base-300 shadow-lg shadow-gray-500  flex ">
@@ -25,9 +33,13 @@ const Navbar = () => {
               <a>Settings</a>
             </li>
             <li>
-              <a onClick={() => navigate("/")} className=" hover:text-red-600">
+              <NavLink
+                to="/"
+                onClick={handelLogout}
+                className=" hover:text-red-600"
+              >
                 Logout
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

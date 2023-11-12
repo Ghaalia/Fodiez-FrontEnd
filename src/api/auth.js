@@ -21,6 +21,7 @@ const checktoken = () => {
 
 const login = async (userInfo) => {
   const res = await instance.post(`/User/signin`, userInfo);
+  storeToken(res.data?.token);
   return res.data;
 };
 
