@@ -5,8 +5,8 @@ const getAllCategory = async () => {
   return res.data;
 };
 
-const getOneCategory = async (id) => {
-  const res = await instance.get(`/Categories/${id}`);
+const getOneCategory = async (CategoryId) => {
+  const res = await instance.get(`/Categories/${CategoryId}`);
   return res.data;
 };
 
@@ -18,8 +18,8 @@ const createNewCategory = async (name, image) => {
   return res.data;
 };
 
-const deleteCategory = async (id) => {
-  const res = await instance.delete(`/Categories/${id}`);
+const deleteCategory = async (CategoryId) => {
+  const res = await instance.delete(`/Categories/${CategoryId}`);
   return res.data;
 };
 

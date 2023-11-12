@@ -9,6 +9,7 @@ import Guest from "./Pages/Guest";
 import { useContext, useEffect, useState } from "react";
 import UserContext from "./context/UserContext";
 import { checktoken } from "./api/auth";
+import CategoryList from "./Components/CategoryList";
 
 function App() {
   const [user, setUser] = useState(false);
@@ -28,6 +29,7 @@ function App() {
           <Route path="/Login" Component={Login} />
           <Route path="/HomePage" Component={HomePage} />
           <Route path="/Guest" Component={Guest} />
+          <Route path="/category" Component={CategoryList} />
         </Routes>
       </div>
     </UserContext.Provider>
