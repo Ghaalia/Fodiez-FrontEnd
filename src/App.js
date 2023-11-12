@@ -6,28 +6,31 @@ import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import Navbar from "./Components/Navbar";
 import Guest from "./Pages/Guest";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import UserContext from "./context/UserContext";
+import { checktoken } from "./api/auth";
 
 function App() {
-  // const { user, setUser } = useContext(UserContext);
+  const [user, setUser] = useState(false);
 
-  // useEffect(() => {
-  //   setUser(checktoken());
-  // }, []);
+  useEffect(() => {
+    setUser(checktoken());
+  }, []);
 
   return (
-    <div className=" bg-">
-      {/* <Navbar /> */}
+    <UserContext.Provider value={{ user, setUser }}>
+      <div className=" bg-">
+        {user && <Navbar />}
 
-      <Routes>
-        <Route path="/" Component={Welcome} />
-        <Route path="/Register" Component={Register} />
-        <Route path="/Login" Component={Login} />
-        <Route path="/HomePage" Component={HomePage} />
-        <Route path="/Guest" Component={Guest} />
-      </Routes>
-    </div>
+        <Routes>
+          <Route path="/" Component={Welcome} />
+          <Route path="/Register" Component={Register} />
+          <Route path="/Login" Component={Login} />
+          <Route path="/HomePage" Component={HomePage} />
+          <Route path="/Guest" Component={Guest} />
+        </Routes>
+      </div>
+    </UserContext.Provider>
   );
 }
 

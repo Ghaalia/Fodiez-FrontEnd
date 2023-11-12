@@ -2,11 +2,7 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 
 const HomePage = () => {
-  return (
-    <div className="">
-      <Navbar />
-    </div>
-  );
+  return <div className=""></div>;
 };
 
 export default HomePage;
