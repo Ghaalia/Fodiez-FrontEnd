@@ -11,6 +11,7 @@ import UserContext from "./context/UserContext";
 import { checktoken } from "./api/auth";
 import CategoryList from "./Components/CategoryList";
 import Profile from "./Pages/Profile";
+import Settings from "./Pages/Settings";
 
 function App() {
   const [user, setUser] = useState(false);
@@ -25,7 +26,7 @@ function App() {
   return (
     <UserContext.Provider value={{ user, setUser }}>
       <div className="App">
-        {user && <Navbar />}
+        <Navbar />
 
         <Routes>
           <Route path="/" Component={Welcome} />
@@ -35,6 +36,7 @@ function App() {
           {/* <Route path="/Guest" Component={Guest} /> */}
           <Route path="/Category" Component={CategoryList} />
           <Route path="/Profile" Component={Profile} />
+          <Route path="/Settings" Component={Settings} />
         </Routes>
       </div>
     </UserContext.Provider>

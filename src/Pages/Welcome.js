@@ -7,6 +7,7 @@ import image5 from "../media/5.jpeg";
 import { useNavigate } from "react-router-dom";
 const Welcome = () => {
   const navigate = useNavigate();
+
   return (
     <div className=" relative flex flex-col align-middle items-center justify-evenly h-screen ">
       <div className=" shadow-xl shadow-gray-400 carousel carousel-center  p-4 space-x-4 bg-neutral rounded-box">
@@ -122,7 +123,7 @@ const Welcome = () => {
 
             <div className="card-actions justify-end">
               <button
-                onClick={() => navigate("/Guest")}
+                onClick={() => navigate("/HomePage")}
                 className="btn btn-primary"
               >
                 Continue as a Guest
