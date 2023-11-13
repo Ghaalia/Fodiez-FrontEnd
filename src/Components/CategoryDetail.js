@@ -12,8 +12,8 @@ const CategoryDetail = () => {
   });
   return (
     <div>
-      <div className="bg-[#F9E3BE] w-screen h-[100vh] flex justify-center items-center">
-        <div className="border border-black rounded-md w-[70%] h-[70%] overflow-hidden flex flex-col md:flex-row p-5">
+      <div className=" w-screen h-[100vh] flex justify-center items-center">
+        <div className="border border-white w-[70%] h-[70%]">
           <div className="h-full w-full md:w-[35%]">
             <img
               src={category?.image}
@@ -24,7 +24,7 @@ const CategoryDetail = () => {
           <div className="w-full md:w-[65%] h-full pt-[30px] flex flex-col p-3">
             <h1>Name: {category?.name}</h1>
 
-            <button className="w-[70px] border border-black rounded-md  hover:bg-red-400">
+            <button className="w-[70px] border border-black rounded-md  ">
               Delete
             </button>
           </div>

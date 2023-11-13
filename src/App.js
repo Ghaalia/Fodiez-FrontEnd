@@ -5,7 +5,6 @@ import Welcome from "./Pages/Welcome";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import Navbar from "./Components/Navbar";
-import Guest from "./Pages/Guest";
 import { useContext, useEffect, useState } from "react";
 import UserContext from "./context/UserContext";
 import { checktoken } from "./api/auth";
@@ -28,7 +27,6 @@ function App() {
           <Route path="/Register" Component={Register} />
           <Route path="/Login" Component={Login} />
           <Route path="/HomePage" Component={HomePage} />
-          <Route path="/Guest" Component={Guest} />
           <Route path="/category" Component={CategoryList} />
         </Routes>
       </div>

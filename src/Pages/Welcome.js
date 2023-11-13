@@ -122,7 +122,7 @@ const Welcome = () => {
 
             <div className="card-actions justify-end">
               <button
-                onClick={() => navigate("/Guest")}
+                onClick={() => navigate("/HomePage")}
                 className="btn btn-primary"
               >
                 Continue as a Guest
