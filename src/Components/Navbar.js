@@ -28,31 +28,50 @@ const Navbar = () => {
               <img src={profilePic} />
             </div>
           </label>
-          <ul
-            tabIndex={0}
-            className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-          >
-            <li>
-              <a
-                onClick={() => navigate("/Profile")}
-                className="justify-between"
-              >
-                Profile
-              </a>
-            </li>
-            <li>
-              <a onClick={() => navigate("/Settings")}>Settings</a>
-            </li>
-            <li>
-              <NavLink
-                to="/"
-                onClick={handelLogout}
-                className=" hover:text-red-600"
-              >
-                Logout
-              </NavLink>
-            </li>
-          </ul>
+          {user ? (
+            <ul
+              tabIndex={0}
+              className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a
+                  onClick={() => navigate("/Profile")}
+                  className="justify-between"
+                >
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a onClick={() => navigate("/Settings")}>Settings</a>
+              </li>
+              <li>
+                <NavLink
+                  to="/"
+                  onClick={handelLogout}
+                  className=" hover:text-red-600"
+                >
+                  Logout
+                </NavLink>
+              </li>
+            </ul>
+          ) : (
+            <ul
+              tabIndex={0}
+              className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a
+                  onClick={() => navigate("/register")}
+                  className="justify-between"
+                >
+                  Register
+                </a>
+              </li>
+              <li>
+                <a onClick={() => navigate("/login")}>Login</a>
+              </li>
+            </ul>
+          )}
         </div>
 
         <div className="form-control">
