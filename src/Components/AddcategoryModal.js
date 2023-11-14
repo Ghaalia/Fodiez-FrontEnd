@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 
 const AddcategoryModal = () => {
-    const [name,setName] = useState("")
-    const [Image,setImage] = useState("")
-const handle = ()=>{
-    e.preventDefault()
-
-}
+  const [name, setName] = useState("");
+  const [Image, setImage] = useState("");
+  const handle = () => {
+    e.preventDefault();
+  };
   return (
     <>
       <div className="form-control w-full max-w-xs">
@@ -23,12 +22,12 @@ const handle = ()=>{
           ✕
         </button>
         <input
-        onClick={}
           type="file"
           className="file-input file-input-bordered w-full max-w-xs"
         />
         <input o type="submit" value="Submit" class="btn" />
-    //   </div>
+        //{" "}
+      </div>
     </>
   );
 };

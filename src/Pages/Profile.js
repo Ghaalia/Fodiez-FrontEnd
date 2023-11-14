@@ -1,14 +1,13 @@
 import React from "react";
+import ProfilePic from "../media/ProfilePic.jpeg";
 
 const Profile = () => {
   return (
-    <div className="flex  h-screen align-middle items-center">
-      <div className="card w-96 h-[50%] shadow-xl shadow-gray-400 bg-neutral mx-5">
-        <figure>
-          <img src="." alt="Profile Picture" />
-        </figure>
+    <div className=" relative flex h-screen align-middle items-center">
+      <div className="card justify-center items-center w-96  shadow-xl shadow-gray-400 bg-neutral mx-5">
+        <img className="rounded-full " src={ProfilePic} alt="Profile Picture" />
 
-        <div className="card-body">
+        <div className="card-body border ">
           <div className="border">
             <h2 className="text-sm">First Name</h2>
             <h2 className="card-title">@UserName</h2>
@@ -26,6 +25,20 @@ const Profile = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className=" flex flex-col  justify-center items-center align-center border border-black w-[90%] gap-10">
+        <div className="flex shadow-lg shadow-gray-300 w-full rounded-box justify-evenly align-middle items-center">
+          <button className="w-[30%] h-10 btn rounded-box place-items-center hover:underline decoration-2 decoration-neutral underline-offset-8">
+            Recipes
+          </button>
+
+          <button className="w-[30%] h-10 btn rounded-box place-items-center hover:underline decoration-2 decoration-neutral underline-offset-8">
+            Favorite
+          </button>
+        </div>
+
+        <div>Hello, Here will be all recipeis</div>
       </div>
     </div>
   );
