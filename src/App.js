@@ -30,13 +30,12 @@ function App() {
 
         <Routes>
           <Route path="/" Component={Welcome} />
-          <Route path="/Register" Component={Register} />
-          <Route path="/Login" Component={Login} />
-          <Route path="/HomePage" Component={HomePage} />
-          {/* <Route path="/Guest" Component={Guest} /> */}
-          <Route path="/Category" Component={CategoryList} />
-          <Route path="/Profile" Component={Profile} />
-          <Route path="/Settings" Component={Settings} />
+          <Route path="/register" Component={Register} />
+          <Route path="/login" Component={Login} />
+          <Route path="/homePage" Component={HomePage} />
+          <Route path="/category" Component={CategoryList} />
+          <Route path="/profile" Component={Profile} />
+          <Route path="/settings" Component={Settings} />
         </Routes>
       </div>
     </UserContext.Provider>
