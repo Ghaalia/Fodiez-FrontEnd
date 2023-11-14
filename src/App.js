@@ -14,6 +14,7 @@ import Settings from "./Pages/Settings";
 
 function App() {
   const [user, setUser] = useState(false);
+
   const navigate = useNavigate();
   console.log(user);
 

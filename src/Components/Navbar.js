@@ -6,6 +6,7 @@ import { logout } from "../api/auth";
 
 const Navbar = () => {
   const { user, setUser } = useContext(UserContext);
+
   const navigate = useNavigate();
   const location = useLocation();
   const hideNavFrom = ["/", "/register", "/login"];
