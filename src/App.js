@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Welcome from "./Pages/Welcome";
 import Register from "./Pages/Register";
@@ -9,27 +9,28 @@ import { useContext, useEffect, useState } from "react";
 import UserContext from "./context/UserContext";
 import { checktoken } from "./api/auth";
 import CategoryList from "./Components/CategoryList";
-import AddcategoryModal from "./Components/AddcategoryModal";
-import AddButton from "./Components/AddButton";
 
 function App() {
   const [user, setUser] = useState(false);
+  const navigate = useNavigate();
+  console.log(user);
 
   useEffect(() => {
     setUser(checktoken());
-  }, []);
+    if (user) navigate("/homepage");
+  }, [user]);
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
       <div className=" bg-">
-        // {user && <Navbar />}
-        // <AddcategoryModal />
-        <AddButton />
+        {user && <Navbar />}
+
         <Routes>
           <Route path="/" Component={Welcome} />
           <Route path="/Register" Component={Register} />
           <Route path="/Login" Component={Login} />
           <Route path="/HomePage" Component={HomePage} />
+          <Route path="/Guest" Component={Guest} />
           <Route path="/category" Component={CategoryList} />
         </Routes>
       </div>

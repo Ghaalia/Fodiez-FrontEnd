@@ -1,9 +1,23 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext } from "react";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import profilePic from "../media/ProfilePic.jpeg";
+import UserContext from "../context/UserContext";
+import { logout } from "../api/auth";
 
 const Navbar = () => {
+  const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  const hideNavFrom = ["/", "/register", "/login"];
+
+  const handelLogout = () => {
+    logout(setUser);
+    navigate("/");
+  };
+
+  if (hideNavFrom.some((path) => path == location.pathname)) {
+    return null;
+  }
 
   return (
     <div className="navbar bg-base-300 shadow-lg shadow-gray-500  flex ">
@@ -19,24 +33,52 @@ const Navbar = () => {
             className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
           >
             <li>
-              <a className="justify-between">Profile</a>
-            </li>
-            <li>
-              <a>Settings</a>
-            </li>
-            <li>
-              <a onClick={() => navigate("/")} className=" hover:text-red-600">
-                Logout
+              <a
+                onClick={() => navigate("/Profile")}
+                className="justify-between"
+              >
+                Profile
               </a>
+            </li>
+            <li>
+              <a onClick={() => navigate("/Settings")}>Settings</a>
+            </li>
+            <li>
+              <NavLink
+                to="/"
+                onClick={handelLogout}
+                className=" hover:text-red-600"
+              >
+                Logout
+              </NavLink>
             </li>
           </ul>
         </div>
+
         <div className="form-control">
-          <input
-            type="text"
-            placeholder="Search"
-            className="input input-bordered w-24 md:w-auto"
-          />
+          <div className="input-group">
+            <input
+              type="text"
+              placeholder="Search…"
+              className="input input-bordered input-sm"
+            />
+            <button className="btn btn-square btn-sm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
