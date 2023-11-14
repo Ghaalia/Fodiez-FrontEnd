@@ -10,7 +10,6 @@ const Register = () => {
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    console.log("here111");
     if (e.target.name === "image") {
       setUserInfo({ ...userInfo, [e.target.name]: e.target.files[0] });
     } else {

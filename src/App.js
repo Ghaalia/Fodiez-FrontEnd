@@ -9,11 +9,10 @@ import { useContext, useEffect, useState } from "react";
 import UserContext from "./context/UserContext";
 import { checktoken } from "./api/auth";
 import CategoryList from "./Components/CategoryList";
-import RecipeModal from "./Components/RecipeModal";
-import CategoryItem from "./Components/CategoryItem";
 
 function App() {
   const [user, setUser] = useState(false);
+
   const navigate = useNavigate();
   console.log(user);
 
@@ -24,16 +23,18 @@ function App() {
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
-      <Navbar />
-      {/* <RecipeModal /> */}
-      {/* <CategoryList /> */}
-      <Routes>
-        <Route path="/" Component={Welcome} />
-        <Route path="/Register" Component={Register} />
-        <Route path="/Login" Component={Login} />
-        <Route path="/HomePage" Component={HomePage} />
-        <Route path="/category" Component={CategoryList} />
-      </Routes>
+      <div className=" bg-">
+        {user && <Navbar />}
+
+        <Routes>
+          <Route path="/" Component={Welcome} />
+          <Route path="/Register" Component={Register} />
+          <Route path="/Login" Component={Login} />
+          <Route path="/HomePage" Component={HomePage} />
+          <Route path="/Guest" Component={Guest} />
+          <Route path="/category" Component={CategoryList} />
+        </Routes>
+      </div>
     </UserContext.Provider>
   );
 }
