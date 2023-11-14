@@ -15,7 +15,7 @@ const CategoryItem = (category) => {
       <div className="card-body">
         <h2 className="card-title">{category.name}</h2>
         <div className="card-actions justify-center ">
-          <Link to={"/categories"}>
+          <Link to={"/"}>
             <button className="btn flex justify-center w-[100px] text-xs btn-primary ">
               View more
             </button>
