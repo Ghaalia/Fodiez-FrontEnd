@@ -23,7 +23,6 @@ const CategoryDetail = () => {
           </div>
           <div className="w-full md:w-[65%] h-full pt-[30px] flex flex-col p-3">
             <h1>Name: {category?.name}</h1>
-
             <button className="w-[70px] border border-black rounded-md  ">
               Delete
             </button>
