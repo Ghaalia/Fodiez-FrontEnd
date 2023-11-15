@@ -7,7 +7,7 @@ import RecipeModal from "../Components/RecipeModal";
 const HomePage = () => {
   return (
     <div className="">
-      <RecipeModal />
+      <CategoryList />
     </div>
   );
 };
