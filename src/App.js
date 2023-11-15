@@ -14,12 +14,11 @@ import Settings from "./Pages/Settings";
 import Recipies from "./Pages/Recipies";
 import AddButton from "./Components/AddButton";
 import RecipeDetail from "./Components/RecipeDetail";
+import RecipeModal from "./Components/RecipeModal";
 
 function App() {
   const [user, setUser] = useState(false);
-
   const navigate = useNavigate();
-  console.log(user);
 
   useEffect(() => {
     setUser(checktoken());
@@ -41,6 +40,7 @@ function App() {
         <Route path="/settings" Component={Settings} />
         <Route path="/recipe" Component={Recipies} />
         <Route path="/recipe/:RecipeId" Component={RecipeDetail} />
+        <Route path="/recipe/create-recipe" Component={RecipeModal} />
       </Routes>
     </UserContext.Provider>
   );

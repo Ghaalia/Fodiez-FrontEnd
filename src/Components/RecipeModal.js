@@ -2,9 +2,11 @@ import React from "react";
 
 const RecipeModal = () => {
   return (
-    <div>
+    <div className="flex justify-evenly">
       <form action="/submit_recipe" method="post" enctype="multipart/form-data">
-        <h2>Create New Recipe</h2>
+        <h2 className="flex justify-center items-center  ">
+          Create New Recipe
+        </h2>
 
         <label for="image">Upload Image:</label>
         <input type="file" id="image" name="image" accept="image/*" required />
