@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import getAllRecipes from "../api/recipies";
+import { getAllRecipes } from "../api/recipies";
 import RecipeItem from "./RecipeItem";
 import { useQuery } from "@tanstack/react-query";
 const RecipeList = () => {

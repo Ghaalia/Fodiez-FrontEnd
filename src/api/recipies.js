@@ -35,7 +35,7 @@ const deleteRecipe = async (id) => {
   return res.data;
 };
 
-export default {
+export {
   deleteRecipe,
   updateRecipe,
   createNewRecipe,

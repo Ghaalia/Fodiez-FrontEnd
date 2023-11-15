@@ -13,6 +13,7 @@ import Profile from "./Pages/Profile";
 import Settings from "./Pages/Settings";
 import Recipies from "./Pages/Recipies";
 import AddButton from "./Components/AddButton";
+import RecipeDetail from "./Components/RecipeDetail";
 
 function App() {
   const [user, setUser] = useState(false);
@@ -39,6 +40,7 @@ function App() {
         <Route path="/profile" Component={Profile} />
         <Route path="/settings" Component={Settings} />
         <Route path="/recipe" Component={Recipies} />
+        <Route path="/recipe/:RecipeId" Component={RecipeDetail} />
       </Routes>
     </UserContext.Provider>
   );

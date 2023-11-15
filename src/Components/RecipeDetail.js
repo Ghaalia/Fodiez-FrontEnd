@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import { useParams } from "react-router-dom";
-import getOneRecipe from "../api/recipies";
+import { getOneRecipe } from "../api/recipies";
+import { BASEURL } from "../api";
 const RecipeDetail = () => {
   const { RecipeId } = useParams();
   const { data: recipe } = useQuery({
@@ -14,7 +15,7 @@ const RecipeDetail = () => {
         <div className="border border-white w-[70%] h-[70%]">
           <div className="h-full w-full md:w-[35%]">
             <img
-              src={recipe?.image}
+              src={`${BASEURL}${recipe?.image}`}
               alt={recipe?.name}
               className="object-contain w-full h-full"
             />
