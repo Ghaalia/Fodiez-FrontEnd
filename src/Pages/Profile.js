@@ -43,6 +43,7 @@ const Profile = () => {
             </div>
           </div>
         </div>
+
         <div className="w-96"></div>
 
         <div className=" flex flex-col  justify-center items-center align-center border border-black w-[90%] gap-10">

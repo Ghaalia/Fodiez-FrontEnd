@@ -36,14 +36,14 @@ const Navbar = () => {
             >
               <li>
                 <a
-                  onClick={() => navigate("/Profile")}
+                  onClick={() => navigate("/profile")}
                   className="justify-between"
                 >
                   Profile
                 </a>
               </li>
               <li>
-                <a onClick={() => navigate("/Settings")}>Settings</a>
+                <a onClick={() => navigate("/settings")}>Settings</a>
               </li>
               <li>
                 <NavLink
@@ -104,7 +104,7 @@ const Navbar = () => {
 
       <div className="flex-1 justify-end">
         <a
-          onClick={() => navigate("/HomePage")}
+          onClick={() => navigate("/homepage")}
           className="btn btn-ghost normal-case text-xl font-serif"
         >
           Foodiez
