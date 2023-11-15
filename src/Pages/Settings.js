@@ -2,8 +2,6 @@ import React from "react";
 import ProfilePic from "../media/ProfilePic.jpeg";
 
 const Settings = () => {
-  const UpdateProfile = () => {};
-
   const ShowToast = () => {
     <div className="toast toast-start toast-middle">
       <div className="alert alert-success">
