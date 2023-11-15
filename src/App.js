@@ -23,18 +23,14 @@ function App() {
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
-      <div className=" bg-">
-        {user && <Navbar />}
-
-        <Routes>
-          <Route path="/" Component={Welcome} />
-          <Route path="/Register" Component={Register} />
-          <Route path="/Login" Component={Login} />
-          <Route path="/HomePage" Component={HomePage} />
-          <Route path="/Guest" Component={Guest} />
-          <Route path="/category" Component={CategoryList} />
-        </Routes>
-      </div>
+      {user && <Navbar />}
+      <Routes>
+        <Route path="/" Component={Welcome} />
+        <Route path="/Register" Component={Register} />
+        <Route path="/Login" Component={Login} />
+        <Route path="/HomePage" Component={HomePage} />
+        <Route path="/category" Component={CategoryList} />
+      </Routes>
     </UserContext.Provider>
   );
 }
