@@ -11,6 +11,7 @@ import { checktoken } from "./api/auth";
 import CategoryList from "./Components/CategoryList";
 import Profile from "./Pages/Profile";
 import Settings from "./Pages/Settings";
+import AddButton from "./Components/AddButton";
 
 function App() {
   const [user, setUser] = useState(false);
@@ -26,6 +27,7 @@ function App() {
   return (
     <UserContext.Provider value={{ user, setUser }}>
       <Navbar />
+      {user && <AddButton />}
 
       <Routes>
         <Route path="/" Component={Welcome} />
