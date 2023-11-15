@@ -15,26 +15,24 @@ const Profile = () => {
       <div className="flex w-[95%] h-screen justify-between align-middle items-center ">
         <div className="fixed card justify-center items-center w-[25%]  shadow-xl shadow-gray-400 bg-neutral  py-[20px]">
           <img
-            className=" rounded-full min-w-[150px] min-h-[150px] max-w-[150px] max-h-[150px] shadow-xl shadow-gray-500 object-cover"
+            className="rounded-full min-w-[150px] min-h-[150px] max-w-[150px] max-h-[150px] shadow-xl shadow-gray-500 object-cover"
             src={ProfilePic}
             alt="Profile Picture"
           />
 
-          <div className="card-body border ">
-            <div className="border">
-              <h2 className="text-sm">First Name</h2>
-              <h2 className="card-title">@UserName</h2>
-            </div>
+          <div className="card-body ">
+            <h2 className="text-sm">First Name</h2>
+            <h2 className="card-title">@UserName</h2>
 
             <div className="flex justify-center gap-5">
-              <div className="border flex flex-col justify-center items-center">
+              <div className="flex flex-col justify-center items-center">
                 <button className=" hover:text-primary">20</button>
                 <button className="hover:bg-primary badge badge-outline">
                   Following
                 </button>
               </div>
 
-              <div className="border flex flex-col justify-center items-center ">
+              <div className="flex flex-col justify-center items-center ">
                 <button className=" hover:text-primary">15</button>
                 <button className=" hover:bg-primary badge badge-outline">
                   Followers
