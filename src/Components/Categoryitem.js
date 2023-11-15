@@ -6,27 +6,28 @@ const CategoryItem = ({ category }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="card card-compact  w-40 h-70 bg-base-100 shadow-xl ">
-        <figure>
-          <img
-            className="h-50"
-            src={`${BASEURL}${category?.image}`}
-            alt={"category"}
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">{category.name}</h2>
-          <div className="card-actions justify-center ">
-            <Link to={`/categories/${category._id}`}>
+    <Link to={`/categories/${category._id}`}>
+      <div className="flex justify-start items-center align-middle rounded-2xl hover:text-neutral ">
+        <div className="card card-compact  w-40 h-70 bg-base-100 shadow-xl ">
+          <figure>
+            <img
+              className="h-50"
+              src={`${BASEURL}${category?.image}`}
+              alt={"category"}
+            />
+          </figure>
+
+          <div className="card-body justify-center items-center align-middle">
+            <h2 className="card-title">{category.name}</h2>
+            <div className="card-actions justify-center ">
               <button className="btn flex justify-center w-[100px] text-xs btn-primary ">
                 View more
               </button>
-            </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

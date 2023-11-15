@@ -19,7 +19,7 @@ const CategoryList = () => {
   console.log(categories);
   return (
     <>
-      <div className=" flex flex-col flex-wrap md:flex-row gap-[20px] w-[76vw]  justify-center items-center mb-[50px]">
+      <div className=" flex flex-col flex-wrap md:flex-row gap-[20px] w-[55vw]  justify-center items-center ">
         {Category_List}
       </div>
     </>

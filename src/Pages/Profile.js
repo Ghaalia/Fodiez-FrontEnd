@@ -1,5 +1,7 @@
 import React from "react";
 import ProfilePic from "../media/ProfilePic.jpeg";
+import CategoryItem from "../Components/CategoryItem";
+import CategoryList from "../Components/CategoryList";
 
 const Profile = () => {
   const showRecipes = () => {
@@ -12,8 +14,8 @@ const Profile = () => {
 
   return (
     <div className="w-screen flex justify-center items-center">
-      <div className="flex w-[95%] h-screen justify-between align-middle items-center ">
-        <div className="fixed card justify-center items-center w-[25%]  shadow-xl shadow-gray-400 bg-neutral  py-[20px]">
+      <div className="flex w-[95%] h-screen justify-end align-middle items-top py-5 ">
+        <div className="fixed top-[200px] left-10 card justify-center items-center w-[35%]  shadow-xl shadow-gray-400 bg-neutral  py-[20px]">
           <img
             className="rounded-full min-w-[150px] min-h-[150px] max-w-[150px] max-h-[150px] shadow-xl shadow-gray-500 object-cover"
             src={ProfilePic}
@@ -42,9 +44,7 @@ const Profile = () => {
           </div>
         </div>
 
-        <div className="w-96"></div>
-
-        <div className=" flex flex-col  justify-center items-center align-center border border-black w-[90%] gap-10">
+        <div className="flex flex-col justify-start items-center align-top border border-black w-[60%] gap-10">
           <div className="flex shadow-lg shadow-gray-300 w-full rounded-box justify-evenly align-middle items-center">
             <button
               onClick={showRecipes()}
@@ -60,6 +60,8 @@ const Profile = () => {
               Favorite
             </button>
           </div>
+
+          <CategoryList />
         </div>
       </div>
     </div>

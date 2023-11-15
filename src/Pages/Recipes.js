@@ -4,7 +4,7 @@ import RecipeItem from "../Components/RecipeItem";
 import { useQuery } from "@tanstack/react-query";
 import RecipeList from "../Components/RecipeList";
 
-const Recipies = () => {
+const Recipes = () => {
   return (
     <div className="">
       <RecipeList />
@@ -12,4 +12,4 @@ const Recipies = () => {
   );
 };
 
-export default Recipies;
+export default Recipes;

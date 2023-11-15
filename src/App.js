@@ -11,7 +11,7 @@ import { checktoken } from "./api/auth";
 import CategoryList from "./Components/CategoryList";
 import Profile from "./Pages/Profile";
 import Settings from "./Pages/Settings";
-import Recipies from "./Pages/Recipies";
+import Recipies from "./Pages/Recipes";
 import AddButton from "./Components/AddButton";
 import RecipeDetail from "./Components/RecipeDetail";
 import RecipeModal from "./Components/RecipeModal";
