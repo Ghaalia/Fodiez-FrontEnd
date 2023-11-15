@@ -5,7 +5,7 @@ const AddButton = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="flex  h-screen border-round   justify-end items-end p-10 ">
+      <div className="fixed bottom-5 right-5 z-[1] flex border-round   justify-end items-end p-10 ">
         <div className="dropdown dropdown-top dropdown-end ">
           <label tabIndex={0} className="btn m-1 ">
             +
