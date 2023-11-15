@@ -6,8 +6,8 @@ const CategoryItem = ({ category }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="card card-compact  w-40 h-70 bg-base-100 shadow-xl ">
+    <div className="flex justify-center items-center">
+      <div className="card card-compact w-[150px] h-[250px] bg-base-100 shadow-xl  items-center">
         <figure>
           <img
             className="h-50"
@@ -15,7 +15,8 @@ const CategoryItem = ({ category }) => {
             alt={"category"}
           />
         </figure>
-        <div className="card-body">
+
+        <div className="card-body flex flex-col justify-center items-center align-middle">
           <h2 className="card-title">{category.name}</h2>
           <div className="card-actions justify-center ">
             <Link to={`/categories/${category._id}`}>

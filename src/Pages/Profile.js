@@ -1,5 +1,6 @@
 import React from "react";
 import ProfilePic from "../media/ProfilePic.jpeg";
+import CategoryList from "../Components/CategoryList";
 
 const Profile = () => {
   const showRecipes = () => {
@@ -44,21 +45,18 @@ const Profile = () => {
 
         <div className="w-96"></div>
 
-        <div className=" flex flex-col  justify-center items-center align-center border border-black w-[90%] gap-10">
+        <div className="flex flex-col justify-start items-center align-center h-[100%]  w-[70%] gap-10 mt-10">
           <div className="flex shadow-lg shadow-gray-300 w-full rounded-box justify-evenly align-middle items-center">
-            <button
-              onClick={showRecipes()}
-              className="w-[30%] h-10 btn rounded-box place-items-center hover:underline decoration-2 decoration-neutral underline-offset-8"
-            >
+            <button className="w-[30%] h-10 btn rounded-box place-items-center hover:underline decoration-2 decoration-neutral underline-offset-8">
               Recipes
             </button>
 
-            <button
-              onClick={showFavorites()}
-              className="w-[30%] h-10 btn rounded-box place-items-center hover:underline decoration-2 decoration-neutral underline-offset-8"
-            >
+            <button className="w-[30%] h-10 btn rounded-box place-items-center hover:underline decoration-2 decoration-neutral underline-offset-8">
               Favorite
             </button>
+          </div>
+          <div>
+            <CategoryList />
           </div>
         </div>
       </div>
