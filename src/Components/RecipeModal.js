@@ -2,7 +2,7 @@ import React from "react";
 
 const RecipeModal = () => {
   return (
-    <>
+    <div>
       <form action="/submit_recipe" method="post" enctype="multipart/form-data">
         <h2>Create New Recipe</h2>
 
@@ -40,7 +40,7 @@ const RecipeModal = () => {
 
         <button type="submit">Create Recipe</button>
       </form>
-    </>
+    </div>
   );
 };
 
