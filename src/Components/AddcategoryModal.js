@@ -1,9 +1,6 @@
 import React from "react";
 
 const AddcategoryModal = () => {
-<<<<<<< HEAD
-  return <div></div>;
-=======
   const [name, setName] = useState("");
   const [Image, setImage] = useState("");
   const handle = () => {
@@ -33,7 +30,6 @@ const AddcategoryModal = () => {
       </div>
     </>
   );
->>>>>>> 86c2d9b59a45605d829d85f6148ac39fad1bd8d6
 };
 
 export default AddcategoryModal;
