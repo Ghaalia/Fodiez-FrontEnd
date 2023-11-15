@@ -1,5 +1,6 @@
 import React from "react";
 import CategoryList from "../Components/CategoryList";
+import RecipeItem from "../Components/RecipeItem";
 
 const HomePage = () => {
   return (

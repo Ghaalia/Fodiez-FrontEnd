@@ -11,6 +11,7 @@ import { checktoken } from "./api/auth";
 import CategoryList from "./Components/CategoryList";
 import Profile from "./Pages/Profile";
 import Settings from "./Pages/Settings";
+import Recipies from "./Pages/Recipies";
 import AddButton from "./Components/AddButton";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/category" Component={CategoryList} />
         <Route path="/profile" Component={Profile} />
         <Route path="/settings" Component={Settings} />
+        <Route path="/recipe" Component={Recipies} />
       </Routes>
     </UserContext.Provider>
   );
