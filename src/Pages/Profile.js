@@ -29,7 +29,7 @@ const Profile = () => {
           />
 
           <div className="card-body ">
-            <h2 className="text-sm">{data.username}</h2>
+            <h2 className="text-lg font-bold">{data.username}</h2>
 
             <div className="flex justify-center gap-5">
               <div className="flex flex-col justify-center items-center">

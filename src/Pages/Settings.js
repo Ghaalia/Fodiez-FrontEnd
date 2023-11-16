@@ -27,7 +27,7 @@ const Settings = () => {
         />
 
         <div className=" flex flex-col gap-3">
-          <div className="form-control w-full max-w-xs">
+          {/* <div className="form-control w-full max-w-xs">
             <label className="label">
               <span className="label-text">First Name:</span>
             </label>
@@ -36,7 +36,7 @@ const Settings = () => {
               placeholder="Enter Your First Name"
               className="input input-sm input-bordered w-full max-w-xs"
             />
-          </div>
+          </div> */}
 
           <div className="form-control w-full max-w-xs">
             <label className="label">
@@ -91,11 +91,11 @@ const Settings = () => {
           </button>
         </div>
       </div>
-      <div className="toast toast-start">
+      {/* <div className="toast toast-start">
         <div className="alert alert-success bg-primary shadow-md shadow-gray-400">
           <span>Your Profile Updated successfully</span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
