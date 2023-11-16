@@ -7,12 +7,12 @@ const CategoryItem = ({ category }) => {
   const navigate = useNavigate();
 
   return (
-    <Link to={`/categories/${category._id}`}>
+    <Link to={`/Recipe/recipes/${category._id}`}>
       <div className="flex justify-start items-center align-middle rounded-2xl hover:text-neutral ">
-        <div className="card card-compact  w-40 h-70 bg-base-100 shadow-xl ">
+        <div className="card card-compact  w-40  h-70 bg-base-100 shadow-xl ">
           <figure>
             <img
-              className="h-50"
+              className="h-50 w-50"
               src={`${BASEURL}${category?.image}`}
               alt={"category"}
             />
@@ -24,7 +24,7 @@ const CategoryItem = ({ category }) => {
               <button
                 className="btn flex justify-center w-[100px] text-xs btn-primary "
                 onClick={() => {
-                  Navigate("/RecipeList");
+                  navigate("/recipe");
                 }}
               >
                 View more

@@ -1,8 +1,15 @@
 import React from "react";
 import ProfilePic from "../media/ProfilePic.jpeg";
 import CategoryList from "../Components/CategoryList";
+import { useQuery } from "@tanstack/react-query";
+import { getMyProfile } from "../api/auth";
 
 const Profile = () => {
+  const { data, isLoading } = useQuery({
+    queryKey: ["profile"],
+    queryFn: () => getMyProfile(),
+  });
+  if (isLoading) return <h2>Loading...</h2>;
   const showRecipes = () => {
     <div> Here will be all recipeis</div>;
   };
@@ -22,8 +29,7 @@ const Profile = () => {
           />
 
           <div className="card-body ">
-            <h2 className="text-sm">First Name</h2>
-            <h2 className="card-title">@UserName</h2>
+            <h2 className="text-sm">{data.username}</h2>
 
             <div className="flex justify-center gap-5">
               <div className="flex flex-col justify-center items-center">

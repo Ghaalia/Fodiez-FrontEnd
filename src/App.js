@@ -44,11 +44,9 @@ function App() {
         <Route path="/createRecipe" Component={CreateRecipie} />
         <Route path="/createCategory" Component={CreateCategory} />
 
-        <Route path="/recipe" Component={Recipies} />
+        <Route path="/Recipe/recipes/:categoryId" Component={Recipies} />
         <Route path="/recipe/:RecipeId" Component={RecipeDetail} />
         <Route path="/recipe/create-recipe" Component={RecipeModal} />
-
-        {/* <Route path="/category" Component={Category} /> */}
       </Routes>
     </UserContext.Provider>
   );

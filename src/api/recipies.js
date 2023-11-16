@@ -35,10 +35,16 @@ const deleteRecipe = async (id) => {
   return res.data;
 };
 
+const getRecipesByCategory = async (id) => {
+  const res = await instance.get(`/Recipe/recipes/${id}`);
+  return res.data;
+};
+
 export {
   deleteRecipe,
   updateRecipe,
   createNewRecipe,
   getOneRecipe,
   getAllRecipes,
+  getRecipesByCategory,
 };
