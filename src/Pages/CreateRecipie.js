@@ -6,7 +6,7 @@ const CreateRecipie = () => {
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold underline underline-offset-2 decoration-blue-300">
+            <h1 className="text-5xl font-bold underline underline-offset-2 decoration-primary">
               New Recipe?
             </h1>
 
@@ -109,14 +109,14 @@ const CreateRecipie = () => {
                   placeholder="Description"
                 ></textarea>
               </div>
-
-              <div className="flex justify-evenly py-5 ">
-                <button className="w-[150px] btn btn-primary">
-                  Create Recipe
-                </button>
-                <button className="w-[150px]  btn btn-primary">Cancel</button>
-              </div>
             </form>
+
+            <div className="flex justify-evenly py-5 ">
+              <button className="w-[150px] btn btn-primary">
+                Create Recipe
+              </button>
+              <button className="w-[150px]  btn btn-primary">Cancel</button>
+            </div>
           </div>
         </div>
       </div>
