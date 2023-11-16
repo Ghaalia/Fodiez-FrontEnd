@@ -37,6 +37,7 @@ const register = async (userInfo) => {
     formData.append(key, userInfo[key]);
   }
   const res = await instance.post(`/User/signup`, formData);
+  storeToken(res.data?.token);
   return res.data;
 };
 
@@ -54,6 +55,10 @@ const updateUser = async (userId, username, password, email) => {
   return res.data;
 };
 
+const getMyProfile = async () => {
+  const res = await instance.get("/User/get-my-profile");
+  return res.data;
+};
 export {
   login,
   register,
@@ -62,4 +67,5 @@ export {
   checktoken,
   logout,
   storeToken,
+  getMyProfile,
 };

@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-import { getAllRecipes } from "../api/recipies";
+import { getRecipesByCategory } from "../api/recipies";
 import RecipeItem from "./RecipeItem";
 import { useQuery } from "@tanstack/react-query";
-const RecipeList = () => {
+
+const RecipeList = ({ categoryId }) => {
   const [query, setQuery] = useState("");
+
   const { data: recipes, isLoading } = useQuery({
     queryKey: ["recipes"],
-    queryFn: () => getAllRecipes(),
+    queryFn: () => getRecipesByCategory(categoryId),
   });
+
   if (isLoading) return <p>Loading ...</p>;
   const Recipe_List = recipes
     .filter((recipe) =>

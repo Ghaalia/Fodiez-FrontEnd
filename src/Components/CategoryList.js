@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { getAllCategory } from "../api/category";
-import CategoryItem from "./Categoryitem";
+import CategoryItem from "./CategoryItem";
 
 const CategoryList = () => {
   const [query, setQuery] = useState("");
@@ -19,7 +19,7 @@ const CategoryList = () => {
   console.log(categories);
   return (
     <>
-      <div className=" flex flex-col flex-wrap md:flex-row gap-[20px] w-[55vw]  justify-center items-center ">
+      <div className=" flex flex-col flex-wrap md:flex-row gap-[20px] w-[55vw] justify-center items-center ">
         {Category_List}
       </div>
     </>

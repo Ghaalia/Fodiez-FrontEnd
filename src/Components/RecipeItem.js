@@ -1,8 +1,9 @@
 import React from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { BASEURL } from "../api";
 
 const RecipeItem = ({ recipe }) => {
+  const navigate = useNavigate();
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="card card-compact  w-40 h-70 bg-base-100 shadow-xl ">
@@ -21,7 +22,7 @@ const RecipeItem = ({ recipe }) => {
               <button
                 className="btn flex justify-center w-[100px] text-xs btn-primary "
                 onClick={() => {
-                  Navigate("/RecipeDetail");
+                  navigate("/RecipeDetail");
                 }}
               >
                 View more
