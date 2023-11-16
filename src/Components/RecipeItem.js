@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { BASEURL } from "../api";
 
 const RecipeItem = ({ recipe }) => {
@@ -18,7 +18,12 @@ const RecipeItem = ({ recipe }) => {
           <h2 className="card-title">{recipe.cookTime}</h2>
           <div className="card-actions justify-center ">
             <Link to={`/recipe/${recipe._id}`}>
-              <button className="btn flex justify-center w-[100px] text-xs btn-primary ">
+              <button
+                className="btn flex justify-center w-[100px] text-xs btn-primary "
+                onClick={() => {
+                  Navigate("/RecipeDetail");
+                }}
+              >
                 View more
               </button>
             </Link>

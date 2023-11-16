@@ -1,6 +1,5 @@
 import React from "react";
 import ProfilePic from "../media/ProfilePic.jpeg";
-import CategoryItem from "../Components/CategoryItem";
 import CategoryList from "../Components/CategoryList";
 
 const Profile = () => {

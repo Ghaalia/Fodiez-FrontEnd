@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import { useMutation } from "@tanstack/react-query";
 import { register } from "../api/auth";
+import HomePage from "./HomePage";
 
 const Register = () => {
   const [userInfo, setUserInfo] = useState({});
@@ -123,9 +124,14 @@ const Register = () => {
                   Register
                 </button>
               ) : (
-                <button type="submit" className="btn">
+                <button
+                  type="submit"
+                  className="btn"
+                  onClick={() => navigate("/HomePage")}
+                >
                   Register
                 </button>
+                // HEREEEEEE
               )}
 
               <button onClick={() => navigate("/ ")} className="btn">

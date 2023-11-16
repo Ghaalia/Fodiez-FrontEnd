@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { getAllCategory } from "../api/category";
-import CategoryItem from "./CategoryItem";
+import CategoryItem from "./Categoryitem";
 
 const CategoryList = () => {
   const [query, setQuery] = useState("");

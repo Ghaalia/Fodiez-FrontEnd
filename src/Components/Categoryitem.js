@@ -1,6 +1,7 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { BASEURL } from "../api";
+import RecipeList from "./RecipeList";
 
 const CategoryItem = ({ category }) => {
   const navigate = useNavigate();
@@ -20,7 +21,12 @@ const CategoryItem = ({ category }) => {
           <div className="card-body justify-center items-center align-middle">
             <h2 className="card-title">{category.name}</h2>
             <div className="card-actions justify-center ">
-              <button className="btn flex justify-center w-[100px] text-xs btn-primary ">
+              <button
+                className="btn flex justify-center w-[100px] text-xs btn-primary "
+                onClick={() => {
+                  Navigate("/RecipeList");
+                }}
+              >
                 View more
               </button>
             </div>
