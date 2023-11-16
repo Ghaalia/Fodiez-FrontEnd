@@ -19,6 +19,7 @@ import RecipeModal from "./Components/RecipeModal";
 import CreateRecipie from "./Pages/CreateRecipie";
 import CreateCategory from "./Pages/CreateCategory";
 
+
 function App() {
   const [user, setUser] = useState(false);
   const navigate = useNavigate();
@@ -47,6 +48,7 @@ function App() {
         <Route path="/Recipe/recipes/:categoryId" Component={Recipies} />
         <Route path="/recipe/:RecipeId" Component={RecipeDetail} />
         <Route path="/recipe/create-recipe" Component={RecipeModal} />
+
       </Routes>
     </UserContext.Provider>
   );
