@@ -6,8 +6,8 @@ const AddButton = () => {
   return (
     <>
       <div className="fixed bottom-5 right-5 z-[10]  flex border-round   justify-end items-end p-10 ">
-        <div className="dropdown dropdown-top dropdown-end ">
-          <label tabIndex={0} className="btn m-1 ">
+        <div className="dropdown dropdown-top dropdown-end  ">
+          <label tabIndex={0} className="btn m-1 shadow-xl shadow-gray-500  ">
             +
           </label>
           <ul
@@ -17,7 +17,7 @@ const AddButton = () => {
             <li>
               <a
                 onClick={() => {
-                  navigate("/recipe/create-recipe");
+                  navigate("/createRecipe");
                 }}
               >
                 New Recipe
@@ -35,7 +35,7 @@ const AddButton = () => {
               </dialog>
             </li>
             <li>
-              <a>New Category</a>
+              <a onClick={() => navigate("/createCategory")}>New Category</a>
             </li>
           </ul>
         </div>

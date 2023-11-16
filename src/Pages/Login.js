@@ -74,11 +74,7 @@ const Login = () => {
                   Loading ...
                 </button>
               ) : (
-                <button
-                  type="submit"
-                  className="btn"
-                  onClick={() => navigate("/homepage")}
-                >
+                <button type="submit" className="btn">
                   {/* HEREEEEEEE */}
                   Login
                 </button>
