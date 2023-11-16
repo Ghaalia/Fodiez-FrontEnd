@@ -43,7 +43,7 @@ const Profile = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-start items-center align-top border border-black w-[60%] gap-10">
+        <div className="flex flex-col justify-start items-center align-top w-[60%] gap-10">
           <div className="flex shadow-lg shadow-gray-300 w-full rounded-box justify-evenly align-middle items-center">
             <button
               onClick={showRecipes()}

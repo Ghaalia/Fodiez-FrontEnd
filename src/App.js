@@ -16,6 +16,10 @@ import AddButton from "./Components/AddButton";
 import RecipeDetail from "./Components/RecipeDetail";
 import RecipeModal from "./Components/RecipeModal";
 
+import CreateRecipie from "./Pages/CreateRecipie";
+import CreateCategory from "./Pages/CreateCategory";
+
+
 function App() {
   const [user, setUser] = useState(false);
   const navigate = useNavigate();
@@ -38,9 +42,13 @@ function App() {
         <Route path="/category" Component={CategoryList} />
         <Route path="/profile" Component={Profile} />
         <Route path="/settings" Component={Settings} />
+        <Route path="/createRecipe" Component={CreateRecipie} />
+        <Route path="/createCategory" Component={CreateCategory} />
+
         <Route path="/recipe" Component={Recipies} />
         <Route path="/recipe/:RecipeId" Component={RecipeDetail} />
         <Route path="/recipe/create-recipe" Component={RecipeModal} />
+
       </Routes>
     </UserContext.Provider>
   );
