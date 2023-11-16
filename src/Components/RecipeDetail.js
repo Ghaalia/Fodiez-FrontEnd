@@ -10,22 +10,26 @@ const RecipeDetail = () => {
     queryFn: () => getOneRecipe(RecipeId),
   });
   return (
-    <div>
-      <div className=" w-screen h-[100vh] flex justify-center items-center">
-        <div className="border border-white w-[70%] h-[70%]">
-          <div className="h-full w-full md:w-[35%]">
-            <img
-              src={`${BASEURL}${recipe?.image}`}
-              alt={recipe?.name}
-              className="object-contain w-full h-full"
-            />
-          </div>
-          <div className="w-full md:w-[65%] h-full pt-[30px] flex flex-col p-3">
-            <h1>Name: {recipe?.name}</h1>
-            <button className="w-[70px] border border-black rounded-md  ">
-              Delete
-            </button>
-          </div>
+    <div className="bg-primary min-h-screen flex items-center justify-center">
+      <div className="border border-white w-3/4 h-3/4 bg-gray-300 flex">
+        <div className="w-1/3">
+          <img
+            src={`${BASEURL}${recipe?.image}`}
+            alt={recipe?.name}
+            className="object-cover w-full h-full"
+          />
+        </div>
+        <div className="w-2/3 p-4">
+          <h1 className="text-2xl font-bold mb-2">
+            Recipe Name: {recipe?.name}
+          </h1>
+          <h2 className="text-lg mb-2">Cooking Time: {recipe?.cookTime}</h2>
+          <h4 className="text-md mb-2">Ingredients: {recipe?.Ingradients}</h4>
+          <h3 className="text-md mb-4">Description: {recipe?.description}</h3>
+
+          <button className="bg-black text-white px-4 py-2 rounded-md">
+            Delete
+          </button>
         </div>
       </div>
     </div>

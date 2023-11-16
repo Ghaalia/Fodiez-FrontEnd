@@ -12,18 +12,18 @@ const CategoryDetail = () => {
   });
   return (
     <div>
-      <div className=" w-screen h-[100vh] flex justify-center items-center">
-        <div className="border border-white w-[70%] h-[70%]">
-          <div className="h-full w-full md:w-[35%]">
+      <div className="bg-primary min-h-screen flex items-center justify-center">
+        <div className="border border-white w-3/4 h-3/4 bg-white flex">
+          <div className="w-1/3">
             <img
-              src={category?.image}
+              src={`${BASEURL}${category?.image}`}
               alt={category?.name}
               className="object-contain w-full h-full"
             />
           </div>
           <div className="w-full md:w-[65%] h-full pt-[30px] flex flex-col p-3">
-            <h1>Name: {category?.name}</h1>
-            <button className="w-[70px] border border-black rounded-md  ">
+            <h1>Category Name: {category?.name}</h1>
+            <button className="bg-black text-white px-4 py-2 rounded-md">
               Delete
             </button>
           </div>
